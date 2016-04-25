@@ -15,11 +15,12 @@ if __name__ == "__main__":
   # below is an alternative
   # with open(file,'r') as f:
     # thread_list = BeautifulSoup(unicode(f.read(),"utf-8"))
-  # somehow if open url of this hipda page and create a bs4 object
-  # everything will be read to the obj, but if copy paste to sublime and save it
+
+  # somehow if open url of this hipda page(return a url handle) and create a bs4 object
+  # everything will be read to the obj, but if copy paste to sublime and save it(file)
   # then glitches due to inconsisitency between unicode and utf-8 will show up
   # if write back the transfered data(unicode()) to the file, ascii encoder will 
-  # report failure on ecoding such data, so the only dirty choice here is unicode()
+  # report failure on encoding such data, so the only dirty choice here is unicode()
   # each time read from a file like this
   content = unicode(f.read(),"utf-8")
   thread_list = BeautifulSoup(content)
